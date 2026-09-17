@@ -1736,3 +1736,201 @@ tbody tr:last-child td {
     height: 270px;
   }
 }
+
+/* ============================================================
+   FINAL DASHBOARD CHART POLISH
+   Works with the updated Dashboard.jsx + Recharts
+============================================================ */
+
+.dashboard-page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.dashboard-page .page-header {
+  margin-bottom: 28px;
+}
+
+.dashboard-page .page-header > div {
+  min-width: 0;
+}
+
+.dashboard-page .page-header h2 {
+  margin: 0;
+}
+
+.dashboard-page .cards {
+  margin-bottom: 0;
+}
+
+.dashboard-chart-grid,
+.dashboard-bottom-grid {
+  width: 100%;
+}
+
+.dashboard-chart-card {
+  overflow: hidden;
+}
+
+.dashboard-chart-card .chart-card-header {
+  min-height: 48px;
+}
+
+.chart-container,
+.order-pie-container {
+  min-width: 0;
+  position: relative;
+}
+
+/* Recharts responsiveness */
+.chart-container .recharts-responsive-container,
+.order-pie-container .recharts-responsive-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Keep chart text clean and consistent with the ERP UI */
+.dashboard-chart-card .recharts-text {
+  fill: #64748b;
+  font-size: 12px;
+}
+
+.dashboard-chart-card .recharts-cartesian-axis-line,
+.dashboard-chart-card .recharts-cartesian-axis-tick-line {
+  stroke: #e2e8f0;
+}
+
+.dashboard-chart-card .recharts-cartesian-grid line {
+  stroke: #e2e8f0;
+}
+
+.dashboard-chart-card .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+/* Refresh button */
+.refresh-dashboard-btn {
+  white-space: nowrap;
+  min-height: 40px;
+}
+
+.refresh-dashboard-btn:active {
+  transform: translateY(1px);
+}
+
+/* Empty order-status chart */
+.order-status-card {
+  min-height: 390px;
+}
+
+.order-status-content {
+  min-width: 0;
+}
+
+.order-pie-container {
+  min-height: 280px;
+}
+
+/* Summary values */
+.inventory-chart-summary strong,
+.status-stat strong,
+.erp-summary-item strong {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   DASHBOARD RESPONSIVE REFINEMENT
+============================================================ */
+
+@media (max-width: 1200px) {
+  .dashboard-chart-grid,
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-chart-card {
+    width: 100%;
+  }
+
+  .order-status-content {
+    grid-template-columns: 1fr;
+  }
+
+  .order-pie-container {
+    min-height: 280px;
+  }
+
+  .order-status-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-chart-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .chart-card-header h3 {
+    font-size: 16px;
+  }
+
+  .chart-card-header p {
+    font-size: 12px;
+  }
+
+  .chart-container {
+    height: 260px;
+  }
+
+  .order-pie-container {
+    height: 270px;
+    min-height: 270px;
+  }
+
+  .inventory-chart-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-summary-item {
+    gap: 12px;
+  }
+
+  .erp-summary-item strong {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-chart-card {
+    padding: 15px;
+  }
+
+  .dashboard-page .cards {
+    gap: 12px;
+  }
+
+  .dashboard-page .card {
+    min-height: 105px;
+    padding: 18px;
+  }
+
+  .dashboard-page .card strong {
+    font-size: 26px;
+  }
+
+  .chart-container {
+    height: 240px;
+  }
+
+  .order-pie-container {
+    height: 250px;
+    min-height: 250px;
+  }
+}
