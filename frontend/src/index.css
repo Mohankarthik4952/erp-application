@@ -1486,3 +1486,253 @@ tbody tr:last-child td {
     flex: 1;
   }
 }
+
+/* ============================================================
+   DASHBOARD
+============================================================ */
+
+.dashboard-page {
+  width: 100%;
+}
+
+.dashboard-loading {
+  padding: 40px;
+  color: #0f172a;
+}
+
+.refresh-dashboard-btn {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.refresh-dashboard-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* ============================================================
+   CHART GRID
+============================================================ */
+
+.dashboard-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* ============================================================
+   CHART CARD
+============================================================ */
+
+.dashboard-chart-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  min-width: 0;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.chart-card-header h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.chart-card-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ============================================================
+   CHART CONTAINER
+============================================================ */
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+/* ============================================================
+   INVENTORY SUMMARY
+============================================================ */
+
+.inventory-chart-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.inventory-chart-summary div {
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.inventory-chart-summary span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.inventory-chart-summary strong {
+  color: #0f172a;
+  font-size: 18px;
+}
+
+/* ============================================================
+   ORDER STATUS
+============================================================ */
+
+.order-status-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.order-pie-container {
+  width: 100%;
+  height: 300px;
+}
+
+.order-status-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.status-stat span {
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-stat strong {
+  color: #0f172a;
+  font-size: 18px;
+}
+
+/* ============================================================
+   ERP SUMMARY
+============================================================ */
+
+.erp-summary-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.erp-summary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.erp-summary-item:last-child {
+  border-bottom: none;
+}
+
+.erp-summary-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.erp-summary-item span {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.erp-summary-item small {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.erp-summary-item strong {
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+  .dashboard-chart-grid,
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status-content {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-chart-card {
+    padding: 18px;
+  }
+
+  .inventory-chart-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .order-status-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    height: 260px;
+  }
+
+  .order-pie-container {
+    height: 270px;
+  }
+}
